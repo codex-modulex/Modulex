@@ -1,0 +1,92 @@
+providers: [
+  {
+    key: "bt"
+    config:
+      commands: [
+        {
+          project: "/Volumes/Macintosh HD/Codex_Modulex/Codex-Modulex/codex_soft/clouds"
+          source: "/Volumes/Macintosh HD/Codex_Modulex/Codex-Modulex/codex_soft/clouds/.build-tools.cson"
+          name: "makefile"
+          command: "make -f %d/makefile"
+          wd: "../"
+          env: {}
+          modifier:
+            wildcards: {}
+          environment:
+            name: "child_process"
+            config:
+              stdoe: "both"
+          stdout:
+            pipeline: []
+          stderr:
+            pipeline: []
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              colors: false
+              stdin: false
+            linter:
+              no_trace: false
+              immediate: false
+          version: 2
+        }
+        {
+          project: "/Volumes/Macintosh HD/Codex_Modulex/Codex-Modulex/codex_soft/clouds"
+          source: "/Volumes/Macintosh HD/Codex_Modulex/Codex-Modulex/codex_soft/clouds/.build-tools.cson"
+          name: "makefile bootloader"
+          command: "make -f %d/bootloader/makefile hex"
+          wd: "../"
+          env: {}
+          modifier:
+            wildcards: {}
+          environment:
+            name: "child_process"
+            config:
+              stdoe: "both"
+          stdout:
+            pipeline: []
+          stderr:
+            pipeline: []
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              colors: false
+              stdin: false
+            linter:
+              no_trace: false
+              immediate: false
+          version: 2
+        }
+        {
+          project: "/Volumes/Macintosh HD/Codex_Modulex/Codex-Modulex/codex_soft/clouds"
+          source: "/Volumes/Macintosh HD/Codex_Modulex/Codex-Modulex/codex_soft/clouds/.build-tools.cson"
+          name: "upload"
+          command: "make -f %d/makefile upload"
+          wd: "../"
+          env: {}
+          modifier:
+            wildcards: {}
+          environment:
+            name: "child_process"
+            config:
+              stdoe: "both"
+          stdout:
+            pipeline: []
+          stderr:
+            pipeline: []
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              colors: false
+              stdin: false
+            linter:
+              no_trace: false
+              immediate: false
+          version: 2
+        }
+      ]
+  }
+]
